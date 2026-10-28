@@ -90,7 +90,15 @@
   footer{text-align:center;color:var(--muted2);font-size:12px;padding:28px 20px 44px;border-top:1px solid var(--line);margin-top:32px}
   footer a{color:var(--muted)}
   footer .brand{color:var(--text);font-weight:700;letter-spacing:.02em}
+
+  /* ---------- Phase 1: life (motion + texture) ---------- */
+  .ra .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.65,.2,1),transform .7s cubic-bezier(.2,.65,.2,1);will-change:opacity,transform}
+  .ra .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){ .ra .reveal{opacity:1!important;transform:none!important;transition:none!important} }
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:40;opacity:.045;mix-blend-mode:overlay;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:140px}
 </style>
+<script>document.documentElement.classList.add('ra')</script>
 </head>
 <body>
 
@@ -105,12 +113,12 @@
 </header>
 
 <div class="band">
-  <div class="wrap">
+  <div class="wrap reveal">
     <h2>What this means for you</h2>
     <p>Choosing where you — or your child — train is a decision built on trust. Accreditation replaces &ldquo;take our word for it&rdquo; with independent proof: a school that has opened its doors to outside review and agreed to be held to a national standard.</p>
     <div class="stat-row">
-      <div class="stat"><b>9</b><span>Standards met</span></div>
-      <div class="stat"><b>40+</b><span>Checkpoints</span></div>
+      <div class="stat"><b data-count="9">9</b><span>Standards met</span></div>
+      <div class="stat"><b data-count="40" data-suffix="+">40+</b><span>Checkpoints</span></div>
       <div class="stat"><b>✓</b><span>Independently verified</span></div>
     </div>
   </div>
@@ -118,66 +126,66 @@
 
 <section class="stds">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head reveal">
       <div class="eyebrow">The Accreditation Standards</div>
       <h2>Nine standards. Every one verified.</h2>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">1</div><h3>A Legal, Established School</h3></div>
       <p class="why">A legitimate, accountable business with a clear mission — not a pop-up operation.</p>
       <ul class="items"><li>Registered business</li><li>Stated mission</li><li>Accountable ownership</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">2</div><h3>Verified Lineage &amp; Credentials</h3></div>
       <p class="why">Instructor rank and lineage are traced and confirmed by the NMAO — never simply self-claimed.</p>
       <ul class="items"><li>Lineage traced</li><li>Certificates verified</li><li>Independently sourced</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">3</div><h3>Safe &amp; Insured</h3></div>
       <p class="why">Carries liability insurance and maintains emergency readiness for everyone on the floor.</p>
       <ul class="items"><li>Liability insurance</li><li>CPR certified</li><li>First-aid ready</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">4</div><h3>A Safe, Monitored Space</h3></div>
       <p class="why">The training floor is supervised and equipped to protect students.</p>
       <ul class="items"><li>Video monitoring</li><li>Fire-safety equipment</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">5</div><h3>Background-Checked Instructors</h3></div>
       <p class="why">Everyone who teaches is screened and vetted, with clear standards for how rank is earned.</p>
       <ul class="items"><li>Background-checked staff</li><li>Vetted assistants</li><li>Clear promotion standards</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">6</div><h3>Open &amp; Transparent</h3></div>
       <p class="why">A real, findable presence families can research before they ever walk in.</p>
       <ul class="items"><li>Public website</li><li>Social presence</li><li>Google profile</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">7</div><h3>Professional Operations</h3></div>
       <p class="why">Run like an institution — documented, fair, and protective of member data.</p>
       <ul class="items"><li>Operations manual</li><li>Fair discipline &amp; appeals</li><li>Protected records</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">8</div><h3>Clean &amp; Health-Conscious</h3></div>
       <p class="why">A hygienic training floor and equipment, maintained on a schedule.</p>
       <ul class="items"><li>Cleaning &amp; disinfection schedule</li><li>Sanitized equipment</li></ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="top"><div class="num">9</div><h3>Held to Account</h3></div>
       <p class="why">Accreditation is not a one-time trophy. It is maintained in good standing — and it can be revoked.</p>
       <ul class="items"><li>Ongoing good standing</li><li>Reviewed regularly</li><li>Revocable</li></ul>
     </div>
 
-    <div class="integrity">
+    <div class="integrity reveal">
       <h3>Why the seal matters</h3>
       <p>Any school can hang a certificate on the wall. This seal is different: it is granted — and can be withdrawn — by the National Martial Arts Organization, an independent accreditation body. A school that displays it has chosen to be measured against a national standard, and to remain accountable to it.</p>
       <div class="sig"><img src="nmao-mark-small.png" alt="">Verified and monitored by the NMAO</div>
@@ -186,7 +194,7 @@
 </section>
 
 <section class="honor">
-  <div class="wrap">
+  <div class="wrap reveal">
     <div class="honor-seal"><img src="nmao-mark-small.png" alt="NMAO"></div>
     <p class="honor-text">The National Martial Arts Organization recognizes the integrity of this school and its commitment to raising the standard of the martial arts profession.</p>
   </div>
@@ -198,5 +206,6 @@
   <p style="margin-top:14px"><a href="https://accredit.nmao.us" style="color:var(--gold-hi)">Run a martial arts school? Get accredited →</a></p>
 </footer>
 
+<script src="anim.js" defer></script>
 </body>
 </html>
